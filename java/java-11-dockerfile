@@ -1,0 +1,8 @@
+FROM openjdk:11
+
+WORKDIR /home
+
+ENV JAVA_OPTS=""
+ENV PARAMS=""
+
+ENTRYPOINT java $JAVA_OPTS -Dloader.path=lib/ -jar app.jar $PARAMS
